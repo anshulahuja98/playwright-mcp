@@ -581,6 +581,36 @@ http.createServer(async (req, res) => {
 
 <!-- NOTE: This has been generated via update-readme.js -->
 
+- **browser_scroll**
+  - Title: Scroll page
+  - Description: Scroll the page in a specified direction
+  - Parameters:
+    - `direction` (string): Direction to scroll
+    - `amount` (number, optional): Amount to scroll in pixels (default: 500)
+  - Read-only: **false**
+
+<!-- NOTE: This has been generated via update-readme.js -->
+
+- **browser_scroll_to_element**
+  - Title: Scroll to element
+  - Description: Scroll the page to bring an element into view
+  - Parameters:
+    - `element` (string): Human-readable element description used to obtain permission to interact with the element
+    - `ref` (string): Exact target element reference from the page snapshot
+  - Read-only: **false**
+
+<!-- NOTE: This has been generated via update-readme.js -->
+
+- **browser_scroll_to_position**
+  - Title: Scroll to position
+  - Description: Scroll the page to a specific position
+  - Parameters:
+    - `x` (number): Horizontal scroll position in pixels
+    - `y` (number): Vertical scroll position in pixels
+  - Read-only: **false**
+
+<!-- NOTE: This has been generated via update-readme.js -->
+
 - **browser_select_option**
   - Title: Select option
   - Description: Select an option in a dropdown

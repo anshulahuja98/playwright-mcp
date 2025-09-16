@@ -21,7 +21,10 @@ const path = require('path')
 const { zodToJsonSchema } = require('zod-to-json-schema')
 const { execSync } = require('child_process');
 
+// Load scroll tools first
+const scrollTools = require('./scroll-tools');
 const { allTools } = require('playwright/lib/mcp/browser/tools');
+allTools.push(...scrollTools);
 
 const capabilities = {
   'core': 'Core automation',

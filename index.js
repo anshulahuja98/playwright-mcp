@@ -15,5 +15,13 @@
  * limitations under the License.
  */
 
-const { createConnection } = require('playwright/lib/mcp/index');
-module.exports = { createConnection };
+const { createConnection: originalCreateConnection } = require('playwright/lib/mcp/index');
+const scrollTools = require('./scroll-tools');
+
+// Patch the tools collection to include scroll functionality
+const originalTools = require('playwright/lib/mcp/browser/tools');
+
+// Add our scroll tools to the allTools array
+originalTools.allTools.push(...scrollTools);
+
+module.exports = { createConnection: originalCreateConnection };
