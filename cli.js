@@ -15,6 +15,11 @@
  * limitations under the License.
  */
 
+// Add scroll tools to the collection before anything else loads
+const scrollTools = require('./scroll-tools');
+const tools = require('playwright/lib/mcp/browser/tools');
+tools.allTools.push(...scrollTools);
+
 const { program } = require('playwright-core/lib/utilsBundle');
 const { decorateCommand } = require('playwright/lib/mcp/program');
 
